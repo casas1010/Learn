@@ -9,8 +9,8 @@ const addToListReducer = (state = [], action) => {
             return [...state, action.payload]
 
         case "REMOVE_FROM_LIST":
-            alert("inside of addToListReducer, remove");
-            return [...state, state.filter(element => element !== "action.payload")]
+            //alert("inside of addToListReducer, remove");
+            return state.filter(element => element !== action.payload);
 
         default:
             return state

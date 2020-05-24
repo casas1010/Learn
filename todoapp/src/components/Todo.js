@@ -9,7 +9,7 @@ class Todo extends React.Component {
 
         return (
             <div>
-                <button onClick={ ()=>{removeFromList(this.props.ele)}} >Complete!</button>{this.props.ele}
+                <button onClick={ ()=>{this.props.removeFromList(this.props.ele)}} >Complete!</button>{this.props.ele}
             </div>
             )
     }
@@ -17,6 +17,3 @@ class Todo extends React.Component {
 
 
 export default connect(null, { removeFromList })(Todo);
-
-
-
